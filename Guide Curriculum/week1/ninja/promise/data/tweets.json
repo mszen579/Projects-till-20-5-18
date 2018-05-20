@@ -1,0 +1,17 @@
+{
+    "tweets": [
+        {
+            "content": "hello"
+        },
+        {
+            "content": "hello"
+        },
+        {
+            "content": [
+                "Mohammad",
+                "38",
+                "172"
+            ]
+        }
+    ]
+}

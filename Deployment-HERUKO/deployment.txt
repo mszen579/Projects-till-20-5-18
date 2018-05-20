@@ -1,0 +1,34 @@
+///////////////////////////////////////////////////////////Deploy a NODE JS FILE WITH PHP//////////////////////////////////
+1- create an account on HEROKU
+2- install a heroku sdk on your device
+3- run your terminal
+4- type 'heroku --version' to check your heroku functionality
+5- type 'heroku login' to access your online heroku account
+6- type "heroku create" to create an app on heroku server
+7- the link you get is your url for your app
+8- type 'git push heroku master' to push your github reprosatory to heroku server
+9- it is very important to add these two files:
+  a- composer.json
+  b- index.php
+ and name your html file "home.html" to any js project to make Heroku thinks that this project is a php project
+
+
+
+///////////////////////////////////////////////////////////Deploy a NODE JS FILE WITHOUT PHP//////////////////////////////////
+add three be sure you have these file in your project app.json, package.json, Procfile "no extention and do not forget to chage to the main js file name" 
+1- create an account on HEROKU
+2- install a heroku sdk on your device
+3- run your terminal
+4- type 'heroku --version' to check your heroku functionality
+5- type 'heroku login' to access your online heroku account
+6- type "heroku create" to create an app on heroku server
+7- the link you get is your url for your app
+8- type 'git push heroku master' to push your github reprosatory to heroku server
+9- it is very important to add these two files:
+  a- composer.json
+  b- index.php
+ and name your html file "home.html" to any js project to make Heroku thinks that this project is a php project
+
+
+
+

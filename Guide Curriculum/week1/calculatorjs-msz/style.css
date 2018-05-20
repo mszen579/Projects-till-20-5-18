@@ -1,0 +1,14 @@
+body {
+    background-image: url("bg.jpg");
+    background-color: #cccccc;
+    opacity: 5;
+}
+
+h1 {
+    
+    margin:auto;
+    text-align:center; 
+    color: white;
+    text-shadow: 2px 2px 2px gray;
+    
+}

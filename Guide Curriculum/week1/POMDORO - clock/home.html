@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MY CLOCK MSZ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <audio id="buzzer" src="http://www.freesfx.co.uk/rx2/mp3s/2/13973_1459880754.mp3" type="audio/mpeg"></audio>
+    <audio id="tictac" src="http://www.freesfx.co.uk/rx2/mp3s/9/11131_1393961470.mp3" type="audio/mpeg"></audio>
+     
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script src="main.js"></script>
+</head>
+
+
+<body style="color: white; ">
+    <div class = "text-center">
+        <h1>Clock - MSZ</h1>
+        <h3>POMDORO CLOCK</h3>
+    <div id="timeDiv" >
+        <h3 id="title1">Session Time</h3> 
+     <br> <br> <br>
+        <a href="#" class ="btn btn-primary" id="minus5Clock">-</a>
+        <h2 id="timeType" style=" color: orange; text-shadow: 2px 2px gray; font-size: 60px;"></h2>
+        <h2 id="num" style=" color: orange; text-shadow: 2px 2px gray; font-size: 60px;">5</h2>
+        <a href="#" class="btn btn-primary" id="add5Clock">+</a>
+        <a href="#" class="btn btn-primary" id="reset">Reset</a>
+    </div>     
+
+    <div id="breakDiv">
+        <h3 id="title2">Break Time</h3>
+        <a href="#" class="btn btn-primary" id="minus5Break">-</a>
+        <h2 id="breakNum" style=" color: orange; text-shadow: 2px 2px gray; font-size: 60px;">5</h2>
+        <a href="#" class="btn btn-primary" id="add5Break">+</a>
+    </div>
+    <br>
+ <a href="#" class="btn btn-primary" id="start">Start</a>
+
+</div>
+
+<!-- <div class="wrapper">
+    <div class="spinner pie"></div>
+    <div class="filler pie"></div>
+    <div class="mask"></div>
+</div> -->
+
+
+</body>
+</html>

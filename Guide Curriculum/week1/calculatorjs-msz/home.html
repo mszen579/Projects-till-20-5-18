@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Calculator - MSZ</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <!-- <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> -->
+            <script type="text/javascript"  src="main.js"></script>
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+
+
+<body>
+<h1 style="color: white;">My Calculator - MSZ</h1>
+
+<center><br>
+
+<form name="Calculator">
+
+<input name="display"  placeholder="0" id="numbhold" style="width: 390px; height: 70px; margin:3px; border-radius:80px; font-size:40px; text-align:center; box-shadow: 3px 3px 3px gray;" />
+
+<br>
+<br>
+    <div style="position: relative; left: -2px;">
+
+<input type="button" value="(" class="btn btn-primary" onclick="document.Calculator.display.value += '('" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value=")" class="btn btn-primary" onclick="document.Calculator.display.value += ')'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="C" class="btn btn-warning" onclick="del()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="AC" class="btn btn-danger" onclick="btnclear()" style="width: 150px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+    </div>
+    
+
+<input type="button" value="x&#178;" class="btn btn-primary" onclick="Calculator.display.value = Math.pow(Calculator.display.value,2)" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+
+<input type="button" value="x&#179;" class="btn btn-primary" onclick="Calculator.display.value = Math.pow(Calculator.display.value,3)" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+
+<input type="button"; value="&#178;&#8730;" class="btn btn-primary" onclick="Calculator.display.value = Math.sqrt(Calculator.display.value)" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+
+<input type="button"; value="&#179;&#8730" class="btn btn-primary" onclick="Calculator.display.value = Math.cbrt(Calculator.display.value)" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>     
+
+<input type="button" value="&#960;" class="btn btn-primary" onclick="pie()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+
+<br>
+
+    
+
+
+<input type="button" value="7" class="btn btn-secondary" onclick="document.Calculator.display.value += '7'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="8" class="btn btn-secondary" onclick="document.Calculator.display.value += '8'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="9" class="btn btn-secondary" onclick="document.Calculator.display.value += '9'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="%" class="btn btn-primary" onclick="btnmod()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+
+<input type="button" value="^" class="btn btn-primary" onclick="document.Calculator.display.value = Math.pow(Calculator.display.value,Calculator.display.value);" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;" />    
+<br>
+
+<input type="button" value="4" class="btn btn-secondary" onclick="document.Calculator.display.value += '4'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="5" class="btn btn-secondary" onclick="document.Calculator.display.value += '5'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="6" class="btn btn-secondary" onclick="document.Calculator.display.value += '6'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+
+<input type="button" value="*" class="btn btn-primary" onclick="btnmult()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>  
+
+<input type="button" value="&#247;" class="btn btn-primary" onclick="btndiv()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/> 
+<br>
+
+    <div class="seclastgroup">
+
+<input type="button" value="1" class="btn btn-secondary" onclick="document.Calculator.display.value += '1'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="2" class="btn btn-secondary" onclick="document.Calculator.display.value += '2'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="3" class="btn btn-secondary" onclick="document.Calculator.display.value += '3'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="+" class="btn btn-primary" onclick="btnplus()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+ <input type="button" value="-" class="btn btn-primary" onclick="btnsub()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>     </div>    
+
+
+    <div class="lastgroup">
+
+<input type="button" value="0" class="btn btn-secondary" onclick="document.Calculator.display.value += '0'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="00" class="btn btn-secondary" onclick="document.Calculator.display.value += '00'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" value="000" class="btn btn-secondary" onclick="document.Calculator.display.value += '000'" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+   
+<input type="button" value="." class="btn btn-primary" onclick="btndot()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+
+<input type="button" class="btn btn-success" value="=" onclick="equal()" style="width: 70px; height: 60px; margin:3px; border-radius:80px; font-size:25px; box-shadow: 3px 3px 3px gray;"/>
+    </div>
+</form>
+
+</center>
+
+
+</body>
+</html>
